@@ -14,9 +14,9 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-body * {
+/* body * {
     outline: 1px solid magenta;
-}
+} */
 
 /* =================
 Typography
@@ -42,15 +42,21 @@ h1 {
     color: var(--dark);
 }
 
+.article-link,
+.article-info {
+    color: var(--light-blue);
+}
+
 strong,
-.article-info,
 .article-body {
     color: var(--gray);
 }
 
-.article-link {
-    color: var(--light-blue);
+.article-read-more {
+    text-decoration: none;
 }
+
+
 
 /* =================
 Layout
