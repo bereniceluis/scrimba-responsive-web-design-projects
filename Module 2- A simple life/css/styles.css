@@ -9,6 +9,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+body * {
+    outline: 1px solid magenta;
+}
+
 /* =================
 Typography
 ================= */
