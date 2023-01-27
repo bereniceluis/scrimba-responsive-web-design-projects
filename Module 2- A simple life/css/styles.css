@@ -1,33 +1,50 @@
-/*  Fonts
------
-font-family: 'Lora', serif;
-font-family: 'Ubuntu', sans-serif;
-*/
-
 :root {
     --light-blue: #1792D2;
     --dark: #143774;
     --gray: #707070;
 }
+
 body {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
 }
 
-/* body * {
+body * {
     outline: 1px solid magenta;
-} */
+} 
 
 /* =================
 Typography
 ================= */
 
-h1 {
+h1, 
+h2,
+h3 {
     font-family: 'Lora', serif; 
     font-weight: 400;
     color: var(--dark);
+}
+
+h1 {
+    color: var(--dark);
     font-size: 2rem;
     margin: 0;
+}
+
+a {
+    color: var(--light-blue);
+    font-weight: bolder;
+}
+
+a:hover,
+a:focus {
+    color: var(--dark);
+}
+
+strong {
+    font-weight: 700;
 }
 
 .subtitle {
@@ -37,26 +54,25 @@ h1 {
     margin: 0;
 }
 
-.article-title {
-    font-family: 'Lora', serif; 
-    color: var(--dark);
+.article-title { 
+    font-size: 1.5rem;
 }
 
-.article-link,
+.article-read-more,
 .article-info {
-    color: var(--light-blue);
-}
-
-strong,
-.article-body {
-    color: var(--gray);
+    font-size: .875rem;
 }
 
 .article-read-more {
+    color: var(--light-blue);
     text-decoration: none;
+    font-weight: 700;
 }
-
-
+.article-read-more:hover,
+.article-read-more:focus {
+    color: var(--dark);
+    text-decoration: underline;
+}
 
 /* =================
 Layout
@@ -132,6 +148,4 @@ nav a:focus {
 }
 
 /* main */
-.container-main {
-    margin: 3em 0;
-}
+
