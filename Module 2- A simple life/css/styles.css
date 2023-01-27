@@ -11,9 +11,14 @@ body {
     font-weight: 300;
 }
 
-body * {
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* body * {
     outline: 1px solid magenta;
-} 
+}  */
 
 /* =================
 Typography
@@ -68,11 +73,17 @@ strong {
     text-decoration: none;
     font-weight: 700;
 }
+
 .article-read-more:hover,
 .article-read-more:focus {
     color: var(--dark);
     text-decoration: underline;
 }
+
+.article-info {
+    margin: 2em 0;
+}
+
 
 /* =================
 Layout
@@ -84,26 +95,31 @@ Layout
     margin: 0 auto;
 }
 
-.container-nav {
+.container-flex {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 header {
     background: #f8f8f8;
     padding: 2em 0;
+    text-align: center;
 }
 
-@media (max-width: 675px) {
-    .container-nav {
-        flex-direction: column;
+@media (min-width: 675px)  {
+    .container-flex {
+        flex-direction: row;
     }
-    
-    header {
-        text-align: center;
+
+    main {
+        width: 75%;
+    }
+
+    aside {
+        width: 20%;
     }
 }
-
 /* navigation */
 
 nav ul {
@@ -147,5 +163,28 @@ nav a:focus {
     }
 }
 
-/* main */
+/* articles */
+
+.article-featured,
+.article-recent-main {
+    padding-bottom: 1em;
+}
+
+.article-featured {
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 2em;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-recent-main {
+    order: 2;
+}
+.article-recent-secondary {
+    order: 1;
+}
+
 
