@@ -10,17 +10,15 @@ body {
     font-size: 1.125rem;
     font-weight: 300;
 }
-
-/* body * {
+/* 
+body * {
     border: 1px solid magenta;
-} */
+}  */
 
 img {
     max-width: 100%;
     display: block;
 }
-
-
 
 /* =================
 Typography
@@ -112,6 +110,7 @@ header {
     background: #f8f8f8;
     padding: 2em 0;
     text-align: center;
+    margin-bottom: 3em;
 }
 
 @media (min-width: 675px) {
@@ -194,38 +193,56 @@ nav a:focus {
     order: 1;
 }
 
-/* @media (min-width: 550px) {
+@media (min-width: 675px) {
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .article-recent-main {
-        margin-top: -2.8em;
+        width: 70%;
     }
     
-    .article-info {
-        text-align: right;
+    .article-recent-secondary {
+        width: 25%;
     }
-} */
+
+    .article-featured {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-image {
+        order: -2;
+    }
+
+    .article-info {
+        order: -1;
+    }
+
+    .article-image {
+        width: 100%;
+        min-height: 250px;  
+        object-fit: cover;
+        /* object-position: left; */
+    }
+   
+}
 
 /* aside */
-
+/* 
 .about-me {
     display: none;
 }
 
 .sidebar-widget {
     margin-bottom: 1em;
-    padding: 2em;
-    border: 1em solid #8e8e8e;
 }
 
 .widget-body {
     display: block;
     text-align: center;
     color: #143774;
-}
-
-.widget-img {
-    overflow: hidden;
-    width: 300px; /* or any other width */
-    height: 200px; /* or any other height */
 }
 
 @media (min-width: 675px) {
@@ -235,6 +252,6 @@ nav a:focus {
     .widget-body {
         display: none;
     }
-}
+} */
 
 
