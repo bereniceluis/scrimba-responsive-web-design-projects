@@ -12,13 +12,9 @@ body {
 
 html {
   font-family: sans-serif;
-
   line-height: 1.15;
-
   -ms-text-size-adjust: 100%;
-
   -webkit-text-size-adjust: 100%;
-
 }
 
 article,
@@ -49,9 +45,7 @@ figure {
 
 hr {
   box-sizing: content-box;
-
   height: 0;
-
   overflow: visible;
 
 }
@@ -66,9 +60,7 @@ pre {
 
 a {
   background-color: transparent;
-
   -webkit-text-decoration-skip: objects;
-
 }
 
 a:active,
@@ -99,7 +91,6 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
-
   font-size: 1em;
 
 }
@@ -131,7 +122,6 @@ sup {
   top: -0.5em;
 }
 
-
 audio,
 video {
   display: inline-block;
@@ -157,11 +147,8 @@ optgroup,
 select,
 textarea {
   font-family: sans-serif;
-
   font-size: 100%;
-
   line-height: 1.15;
-
   margin: 0;
 
 }
@@ -209,24 +196,16 @@ fieldset {
 
 legend {
   box-sizing: border-box;
-
   color: inherit;
-
   display: table;
-
   max-width: 100%;
-
   padding: 0;
-
   white-space: normal;
-
 }
 
 progress {
   display: inline-block;
-
   vertical-align: baseline;
-
 }
 
 textarea {
@@ -248,7 +227,6 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield;
-
   outline-offset: -2px;
 
 }
@@ -260,11 +238,9 @@ textarea {
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-
   font: inherit;
 
 }
-
 
 details,
 menu {
@@ -275,7 +251,6 @@ summary {
   display: list-item;
 }
 
-
 canvas {
   display: inline-block;
 }
@@ -284,26 +259,30 @@ template {
   display: none;
 }
 
-
 [hidden] {
   display: none;
 }
+
 input:focus,
 input.__focus {
   outline: 4px solid rgba(117, 170, 255, 0.5);
 }
+
 button:focus,
 button.__focus {
   outline: 4px solid rgba(117, 170, 255, 0.5);
 }
+
 button:active,
 button.__active {
   -ms-transform: scale(0.97);
       transform: scale(0.97);
 }
+
 ::-moz-selection {
   background-color: #75aaff;
 }
+
 ::selection {
   background-color: #75aaff;
 }

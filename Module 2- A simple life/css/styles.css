@@ -10,10 +10,10 @@ body {
     font-size: 1.125rem;
     font-weight: 300;
 }
-/* 
+
 body * {
     border: 1px solid magenta;
-}  */
+} 
 
 img {
     max-width: 100%;
@@ -84,8 +84,16 @@ strong {
     margin: 2em 0;
 }
 
+.widget-title,
+.widget-recent-post-title {
+    font-size: 1rem;
+}
+
+
 .widget-title {
+    font-size: 1rem;
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
 }
 
 .article-info,
@@ -93,16 +101,12 @@ strong {
     font-size: 0.875rem;
 }
 
-.widget-recent-post-title {
-    font-size: 1.125rem;
-}
-
 /* =================
 Layout
 ================= */
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -126,11 +130,15 @@ header {
     }
     
     main {
-        width: 70%;
+        width: 75%;
     }
     
     aside {
-        width: 25%;
+        width: 20%;
+        min-width: 200px;
+        margin-left: 1em;
+        /* solves the huge sidebar when lowering the screen size */
+        /* min-width: 200px; */
     }
 }
 
@@ -225,6 +233,8 @@ nav a:focus {
 
     .article-image {
         order: -2;
+        min-height: 250px;
+        object-fit: cover;
     }
 
     .article-info {
@@ -242,30 +252,33 @@ nav a:focus {
 /* widgets */
 
 .sidebar-widget {
-    border: 1em solid #EBEBEB;
+    border: 1em solid #EFEFEF;
     margin-bottom: 2em;
     padding: 1em;
 }
 
-
-
 .widget-recent-post {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid #707070;
     margin-bottom: 1.5em;
 }
 
+.widget-recent-post:last-child {
+    border: 0;
+    margin: 0;
+}
+
 .widget-image {
-    order: -2;
+    order: -1;
+}
+
+.widget-body {
+    text-align: center;
 }
 
 .widget-recent-post-title {
     margin: 1em 0;
-}
-
-.widget-recent-post:nth-child(2),
-.widget-recent-post:nth-child(3){
-    border-bottom: 1px solid #707070;
 }
 
 .about-me {
@@ -276,6 +289,7 @@ nav a:focus {
     .about-me {
         display: block;
     }
+   
 }
 
 
