@@ -9,6 +9,11 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.125rem;
     font-weight: 300;
+    /* 
+    if youre using unit, it will apply to all headings, and body. 
+    if no units. it only just apply it to the body. 
+    */
+    line-height: 1.7;
 }
 
 /* body * {
@@ -64,10 +69,11 @@ strong {
 
 /* h1 subtitle */
 .subtitle {
-    font-weight: 700;
-    color: #1792d2;
-    font-size: .75rem;
     margin: 0;
+    color: #1792d2;
+    font-weight: 700;
+    font-size: .75rem;
+    text-transform: uppercase;
 }
 
 .article-title {
@@ -83,6 +89,9 @@ strong {
     color: #1792d2;
     text-decoration: none;
     font-weight: 700;
+    /* upping text styles */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .article-read-more:hover,
@@ -98,6 +107,7 @@ strong {
 .widget-title,
 .widget-recent-post-title {
     font-size: 1rem;
+    line-height: 1.4;
 }
 
 .widget-recent-post-title {
@@ -109,6 +119,7 @@ strong {
     font-size: 1rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .article-info,
@@ -137,6 +148,7 @@ header {
     padding: 2em 0;
     text-align: center;
     margin-bottom: 3em;
+    
 }
 
 @media (min-width: 675px) {
@@ -148,6 +160,9 @@ header {
         width: 75%;
     }
     
+    header {
+        text-align: left;
+    }
     aside {
         width: 20%;
         min-width: 200px;
@@ -175,6 +190,9 @@ nav a {
     color: #707070;
     font-weight: 700;
     padding: .25em 0;
+    /* upping text design */
+    text-transform: uppercase;
+    letter-spacing: 2px;  
 }
 
 nav a:hover,
