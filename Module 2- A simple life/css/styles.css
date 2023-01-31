@@ -11,13 +11,20 @@ body {
     font-weight: 300;
 }
 
-body * {
+/* body * {
     border: 1px solid magenta;
-} 
+}  */
 
 img {
     max-width: 100%;
     display: block;
+}
+
+.image-full {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
 }
 
 /* =================
@@ -36,6 +43,10 @@ h3 {
 h1 {
     font-size: 2rem;
     margin: 0;
+}
+
+h3 {
+    color: #1792d2;
 }
 
 a {
@@ -87,6 +98,10 @@ strong {
 .widget-title,
 .widget-recent-post-title {
     font-size: 1rem;
+}
+
+.widget-recent-post-title {
+    color: #143774;
 }
 
 
