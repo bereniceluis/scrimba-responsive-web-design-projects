@@ -152,10 +152,11 @@ header {
 }
 
 footer {
-    background:#143774;
-    color: #89c9e0;
+    background:#345480;
+    /* alpha -> opacity / transparency */
+    color: rgba(255, 255, 255, 0.65);
     text-align: center;
-    padding: 3em 0;
+    padding: 2em 0;
 }
 
 @media (min-width: 675px) {
