@@ -151,6 +151,13 @@ header {
     
 }
 
+footer {
+    background:#143774;
+    color: #89c9e0;
+    text-align: center;
+    padding: 3em 0;
+}
+
 @media (min-width: 675px) {
     .container-flex {
         flex-direction: row;
