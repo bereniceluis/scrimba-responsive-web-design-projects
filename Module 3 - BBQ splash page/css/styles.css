@@ -1,0 +1,109 @@
+/* Colors
+-----
+
+#F18119 
+#404040
+#FFF 
+
+Gradient
+#FF713B - #FFA51D
+*/
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Source Sans', sans-serif;
+    color: #404040;
+    text-align: center;
+}
+
+/* =================
+Typography
+================= */
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #FFF;
+    margin: 2em 0;
+}
+
+h2 {
+    font-size: 1.315rem;
+    margin: 0; 
+}
+
+h1 + p {
+    font-size: 1.3125rem;
+}
+
+h2 + p {
+    font-size: 1rem;
+    margin-top: 0 ;
+}
+
+h1 + p,
+h2 + p {
+    color: #F18119;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.top-text {
+    font-size: 0.625rem;
+    font-weight: 900;
+    color: #F18119;
+    text-transform: uppercase;
+    order: -1;
+}
+
+strong {
+    font-weight: 900;
+}
+
+/*==================
+Intro section
+================== */
+
+.intro {
+    /* just incase the image didn't load */
+    background-color: #404040;
+    background-image: url(../images/dark-ribs.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 .25em 1em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*==================
+Main section
+================== */
+
+.main-content {
+    padding: 2em 1em;
+}
+
+/*==================
+Media queries
+================== */
+
+@media (min-size: 500px) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+
+    
+}
