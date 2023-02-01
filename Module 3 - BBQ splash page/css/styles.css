@@ -15,6 +15,10 @@ body {
     text-align: center;
 }
 
+/* body * {
+    outline: 1px solid magenta;
+} */
+
 /* =================
 Typography
 ================= */
@@ -23,7 +27,7 @@ h1 {
     font-size: 2.25rem;
     font-weight: 300;
     color: #FFF;
-    margin: 2em 0;
+    margin: 0;
 }
 
 h2 {
@@ -55,6 +59,12 @@ h2 + p {
     order: -1;
 }
 
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+
 strong {
     font-weight: 900;
 }
@@ -70,9 +80,6 @@ Intro section
     background-position: center;
     background-size: cover;
     padding: 0 .5em 1em;
-
-    display: flex;
-    flex-direction: column;
 }
 
 /*==================
@@ -81,6 +88,35 @@ Main section
 
 .main-content {
     padding: 2em 1em;
+}
+
+/*  
+    reason why m,argin: 0 auto is not utilized is that, it will overwrite
+     the previous margins that were set. 
+    
+     so to achieve the center look of both intro and main section, 
+     the long method is don instead of the shorthand method of
+
+     margin 0 auto.
+*/
+
+/* .intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
 }
 
 /*==================
@@ -108,6 +144,19 @@ Media queries
         /* 
         new learnings: always set to min-height instead of solely height 
         */
-        min-height: 100vh; 
-    }   
+        min-height: 100vh;
+    }  
+    
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* we cant always put percentages on heigh 
+    but this is an exception */
+
+    .container-intro {
+        height: 100%;
+    }
 }
