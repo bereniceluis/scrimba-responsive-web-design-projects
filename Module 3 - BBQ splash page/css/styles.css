@@ -1,17 +1,14 @@
-/* Colors
------
+* {
+    /* default: content-box
 
-#F18119 
-#404040
-#FFF 
-
-Gradient
-#FF713B - #FFA51D
-*/
+    when we set the box-sizing to border-box, padding, border, or margin are included 
+    in the width/height of an element when we set it.
+    */
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    box-sizing: border-box;
     font-size: 1rem;
     font-family: 'Source Sans', sans-serif;
     color: #404040;
@@ -78,7 +75,6 @@ Intro section
     flex-direction: column;
 }
 
-
 /*==================
 Main section
 ================== */
@@ -96,24 +92,22 @@ Media queries
         font-size: 1.125rem;
         display: flex;
     }
-
+    
     h1 {
         font-size: 3.5rem;
     }
-
+    
     h2,
     h1 + p {
         font-size: 1.75rem;
     }
-
+    
     .intro,
     .main-content {
         width: 50%;
-    }
-
-    
-
-    
-
-    
+        /* 
+        new learnings: always set to min-height instead of solely height 
+        */
+        min-height: 100vh; 
+    }   
 }
