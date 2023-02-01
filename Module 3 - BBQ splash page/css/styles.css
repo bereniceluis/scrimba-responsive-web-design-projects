@@ -124,6 +124,46 @@ Main section
 } */
 
 /*==================
+Form
+================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.email-collector {
+    width: 80%;
+    max-width: 300px;
+}
+
+/*  input has a default width, 
+so setting it to a 100%, meaning it will
+fill a huindred percent of its parent. */
+input,
+.btn {
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    padding: .8em;
+    margin: .5em 0;
+    border: none;
+}
+
+input {
+    border: 1px solid #404040a8;
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: transparent linear-gradient(270deg, #FF713B 0%, #FFA51D 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+
+/*==================
 Media queries
 ================== */
 
