@@ -72,7 +72,7 @@ Intro section
     background-image: url(../images/dark-ribs.jpg);
     background-position: center;
     background-size: cover;
-    padding: 0 .25em 1em;
+    padding: 0 .5em 1em;
 
     display: flex;
     flex-direction: column;
@@ -91,9 +91,10 @@ Main section
 Media queries
 ================== */
 
-@media (min-size: 500px) {
+@media (min-width: 500px) {
     body {
         font-size: 1.125rem;
+        display: flex;
     }
 
     h1 {
@@ -104,6 +105,15 @@ Media queries
     h1 + p {
         font-size: 1.75rem;
     }
+
+    .intro,
+    .main-content {
+        width: 50%;
+    }
+
+    
+
+    
 
     
 }
