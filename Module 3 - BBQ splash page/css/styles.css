@@ -84,6 +84,7 @@ Intro section
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 50vh;
 }
 
 /*==================
@@ -111,6 +112,9 @@ Main section
     margin-right: auto;
 }
 
+/* another solution to centering contents but 
+   it is a lot. */
+
 /* .container {
     max-width: 400px;
     margin: 0 auto;
@@ -133,7 +137,6 @@ form {
     justify-content: space-between;
 }
 
-
 .email-collector {
     width: 80%;
     max-width: 300px;
@@ -145,21 +148,34 @@ fill a huindred percent of its parent. */
 input,
 .btn {
     width: 100%;
-    text-align: center;
-    border-radius: 8px;
-    padding: .8em;
-    margin: .5em 0;
-    border: none;
+    border-radius: 5px;
 }
 
 input {
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom: .75em;
+    padding: .25em;
     border: 1px solid #404040a8;
+    border-radius: 5px;
 }
 
 .btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: .625rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    background: transparent linear-gradient(270deg, #FF713B 0%, #FFA51D 100%) 0% 0% no-repeat padding-box;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    /* no hover on buttons but you
+    can use a cursor:pointer to make
+    it more interactive. */
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(to left, #ff713b, #ffa51d);
     color: #fff;
 }
 
