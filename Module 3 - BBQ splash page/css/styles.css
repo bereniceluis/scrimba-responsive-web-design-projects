@@ -100,14 +100,14 @@ Main section
      margin 0 auto.
 */
 
-/* .intro > *,
+.intro > *,
 .main-content > * {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-} */
+}
 
-.container {
+/* .container {
     max-width: 400px;
     margin: 0 auto;
 }
@@ -117,7 +117,7 @@ Main section
     flex-direction: column;
     justify-content: space-between;
     min-height: 50vh;
-}
+} */
 
 /*==================
 Media queries
