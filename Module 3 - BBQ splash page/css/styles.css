@@ -49,10 +49,15 @@ h2 + p {
 
 .top-text {
     font-size: 0.625rem;
+    margin: 0;
+    padding-top: 2px;
     font-weight: 900;
     color: #F18119;
     text-transform: uppercase;
     order: -1;
+    border-top: 5px solid #F18119;
+    /* trick */
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
 }
 
 .fine-print {
@@ -70,9 +75,11 @@ Intro section
 ================== */
 
 .intro {
+    background-image: url(../images/ribs.jpg);
     /* just incase the image didn't load */
     background-color: #404040;
-    background-image: url(../images/dark-ribs.jpg);
+    /* you need to have bg color and bg img */
+    background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
     padding: 0 .5em 1em;
