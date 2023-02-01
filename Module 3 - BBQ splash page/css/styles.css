@@ -177,6 +177,12 @@ input {
 .btn-primary {
     background: linear-gradient(to left, #ff713b, #ffa51d);
     color: #fff;
+    /* can be another solution to hover :3 */
+    transition: color 1s;
+}
+
+.btn-primary:hover {
+    color: #000;
 }
 
 /*==================
