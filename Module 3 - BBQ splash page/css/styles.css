@@ -154,6 +154,12 @@ input {
     padding: .25em;
     border: 1px solid #404040a8;
     border-radius: 5px;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus {
+    transform: scale(1.1);
 }
 
 .btn {
@@ -178,7 +184,8 @@ input {
     transition: transform 250ms;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     transform: scale(1.1);
 }
 
