@@ -12,37 +12,11 @@ html, body {
 Typography
 =============*/
 
-.card-title {
-    color: #05cbe9;
-    font-size: 1.75rem;
-    margin: 0;
-}
-
-.card-btn {
-    font-size: 1.25rem;
-}
-
-.card-title,
-.card-read-more,
-.card-btn {
-    font-family: 'Blinker', sans-serif;
-}
-
-.card-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    /* no px */
-    line-height: 1.6;
-}
-
-/*===========
-Layout
-=============*/
-
 .card {
     width: 90%;
     margin: 0 auto;
     max-width: 800px;
-    background: #111D4A;
+    background: #111d4a;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -51,48 +25,74 @@ Layout
 .card-image {
     object-fit: cover;
     flex-basis: 200px;
-    /* fixing the bug of flex-basis
-    on chrome and other browsers */
+    /* to solve the problem in certain browsers*/
     min-width: 0;
     min-height: 0;
+    
+    background: yellow;
 }
 
 .card-content {
     padding: 1em;
 }
 
+.card-title,
+.card-read-time,
+.card-btn {
+    font-family: 'Blinker', sans-serif;
+}
+
+.card-title {
+    color: #05cbe9;
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.card-body {
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+}
+
 .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-top: 3em;
 }
 
 .card-btn {
     font-size: 1.25rem;
-    background-color: #05CBE9;
-    color: #111D4A;
-    padding: .5em 1em;
+    background: #05cbe9;
+    color: #111d4a;
     text-decoration: none;
+    font-weight: 700;
+    padding: .35em 1em;
+    letter-spacing: 1px;
 }
 
 .card-read-time {
-    max-width: 20px;
     margin: 0;
     opacity: .6;
     line-height: 1;
 }
 
 .card-read-time span {
-    display: block;
     font-weight: 700;
+    display: block;
     font-size: 1.25em;
 }
+
 
 @media (min-width: 600px) {
     .card {
         flex-direction: row;
     }
-
+    
+    .card-img {
+        height: 300px;
+    }
+    
     .card-content {
         display: flex;
         flex-direction: column;
@@ -101,6 +101,4 @@ Layout
     .card-footer {
         margin-top: auto;
     }
-
-   
 }
