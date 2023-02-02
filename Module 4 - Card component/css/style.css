@@ -50,7 +50,7 @@ Layout
 
 .card-image {
     object-fit: cover;
-    flex-basis: 150px;
+    flex-basis: 200px;
     /* fixing the bug of flex-basis
     on chrome and other browsers */
     min-width: 0;
@@ -92,6 +92,15 @@ Layout
 @media (min-width: 600px) {
     .card {
         flex-direction: row;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-footer {
+        margin-top: auto;
     }
 
    
