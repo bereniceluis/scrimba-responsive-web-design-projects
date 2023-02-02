@@ -57,7 +57,6 @@ Layout
     min-height: 0;
 }
 
-
 .card-content {
     padding: 1em;
 }
@@ -79,8 +78,8 @@ Layout
 .card-read-time {
     max-width: 20px;
     margin: 0;
-    font-size: 20px;
     opacity: .6;
+    line-height: 1;
 }
 
 .card-read-time span {
