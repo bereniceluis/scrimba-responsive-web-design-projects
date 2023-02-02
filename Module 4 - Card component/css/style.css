@@ -1,4 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
+}
+
+/*===========
+Typography
+=============*/
+
+.card-title {
+    font-size: 28px;
+}
+
+.card-btn {
+    font-size: 20px;
+}
+
+.card-component {
+    display: flex;
 }
