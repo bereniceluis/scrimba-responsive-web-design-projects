@@ -12,14 +12,77 @@ html, body {
 Typography
 =============*/
 
+
 .card-title {
-    font-size: 28px;
+    color: #05cbe9;
+    font-size: 1.75rem;
+    margin: 0;
 }
 
 .card-btn {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
-.card-component {
+.card-title,
+.card-read-more,
+.card-btn {
+    font-family: 'Blinker', sans-serif;
+}
+
+.card-body {
+    font-family: 'Source Sans Pro', sans-serif;
+    /* no px */
+    line-height: 1.6;
+}
+
+/*===========
+Layout
+=============*/
+
+.card {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    background: #111D4A;
+    color: #fff;
     display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    object-fit: cover;
+    height: 150px;
+}
+
+.card-content {
+    padding: 1em;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-btn {
+    font-size: 1.25rem;
+    background-color: #05CBE9;
+    color: #111D4A;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+.card-read-time {
+    max-width: 20px;
+    margin: 0;
+}
+
+span {
+    font-weight: 900;
+}
+
+@media (min-width: 500px) {
+    .card {
+        flex-direction: row;
+    }
 }
