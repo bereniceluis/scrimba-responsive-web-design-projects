@@ -23,11 +23,13 @@ Typography
 =============*/
 
 .card {
+    display: grid;
     width: 90%;
     max-width: 800px;
     background: #111d4a;
     color: #fff;
-    display: grid;
+    /* grid-template-rows / grid-template-columns */
+    grid-template: 200px auto auto 150px / auto auto;
 }
 
 .card-img {
