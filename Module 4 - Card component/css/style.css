@@ -76,12 +76,12 @@ body {
 
 @media (min-width: 600px) {
    .card {
-    grid-template: auto auto auto / 200px 100px auto;
+    grid-template: 1em auto auto 150px 1em / 200px auto auto;
    }
 
    .card-image {
-    grid-column: 1;
     grid-row: 1 / -1;
+    grid-column: 1 / 2;
    }
 
    .card-title {
