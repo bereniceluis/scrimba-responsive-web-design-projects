@@ -1,27 +1,10 @@
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
-
-/* centering items using 
-flexbox */
-
 body {
+    margin: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
 }
-
-/*===========
-Typography
-=============*/
 
 .card {
     display: grid;
@@ -29,8 +12,8 @@ Typography
     max-width: 800px;
     background: #111d4a;
     color: #fff;
-    /* grid-template-rows / grid-template-columns */
-    grid-template: 200px auto auto 150px / auto auto;
+    grid-template: 200px 1em auto auto 100px 1em / 1em auto auto 1em;
+    
 }
 
 .card-image {
@@ -50,12 +33,16 @@ Typography
     color: #05cbe9;
     font-size: 1.75rem;
     margin: 0;
+    grid-column: 2 / -2;
+    grid-row: 3;
 }
 
 .card-body {
     font-size: 1rem;
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.6;
+    grid-column: 2 / -2;
+    grid-row: 4;
 }
 
 .card-btn {
@@ -66,12 +53,19 @@ Typography
     font-weight: 700;
     padding: .35em 1em;
     letter-spacing: 1px;
+    align-self: end;
+    justify-self: end;
+    grid-row: 5;
+    grid-column: 3;
 }
 
 .card-read-time {
     margin: 0;
     opacity: .6;
     line-height: 1;
+    align-self: end;
+    grid-row: 5;
+    grid-column: 2;
 }
 
 .card-read-time span {
@@ -79,4 +73,3 @@ Typography
     display: block;
     font-size: 1.25em;
 }
-
