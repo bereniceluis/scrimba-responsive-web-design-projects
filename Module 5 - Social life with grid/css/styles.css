@@ -221,7 +221,7 @@ nav a:focus {
 
 .article-recent {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr max-content;
     grid-template-areas: 
        "image image"
         "title date"
@@ -230,11 +230,14 @@ nav a:focus {
         margin-bottom: 2em;
     }
 
-.article-image { grid-area: image }
-.article-title { grid-area: title }
-.article-info { grid-area: date; justify-self: end; }
-.article-body { grid-area: body }
+.article-image     { grid-area: image }
+.article-title     { grid-area: title }
+.article-body      { grid-area: body }
 .article-read-more { grid-area: read-more }
+.article-info { 
+    grid-area: date; 
+    justify-self: end; 
+}
 
 @media (min-width: 675px) {
     
