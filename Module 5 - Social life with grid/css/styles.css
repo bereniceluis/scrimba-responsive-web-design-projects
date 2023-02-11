@@ -12,6 +12,10 @@ body {
     line-height: 1.6;
 }
 
+body * {
+    outline: 1px solid magenta;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -216,19 +220,19 @@ nav a:focus {
 }
 
 .article-recent {
-    margin-bottom: 2em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-        "image image"
+       "image image"
         "title date"
         "body body"
         "read-more .";
-}
+        margin-bottom: 2em;
+    }
 
 .article-image { grid-area: image }
 .article-title { grid-area: title }
-.article-info { grid-area: date }
+.article-info { grid-area: date; justify-self: end; }
 .article-body { grid-area: body }
 .article-read-more { grid-area: read-more }
 
