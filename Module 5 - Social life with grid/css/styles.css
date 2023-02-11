@@ -216,48 +216,24 @@ nav a:focus {
 }
 
 .article-recent {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "image image"
+        "title date"
+        "body body"
+        "read-more .";
 }
 
-.article-recent-main {
-    order: 2;
-}
-
-.article-recent-secondary {
-    order: 1;
-}
+.article-image { grid-area: image }
+.article-title { grid-area: title }
+.article-info { grid-area: date }
+.article-body { grid-area: body }
+.article-read-more { grid-area: read-more }
 
 @media (min-width: 675px) {
-    .article-recent {
-        flex-direction: row;
-        justify-content: space-between;
-    }
     
-    .article-recent-main {
-        width: 68%;
-    }
-    
-    .article-recent-secondary {
-        width: 30%;
-    }
-    
-    .article-featured {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .article-image {
-        order: -2;
-        min-height: 250px;
-        object-fit: cover;
-        /* object-position: left; */
-    }
-    
-    .article-info {
-        order: -1;
-    }
 }
 
 /* widgets */
