@@ -14,9 +14,9 @@ img {
     max-width: 100%;
 }
 
-body * {
+/* body * {
     outline: 1px solid magenta;
-}
+} */
 
 /* ==================
     Typography
@@ -39,10 +39,31 @@ strong {
     margin-bottom: 0;
 }
 
+.hero-subtitle {
+    font-size: 1.125rem;
+}
+
 .section-title {
     font-size: 1.125rem;
     color: #000;
     margin-top: 1.25em;
+}
+
+/* after the content of the h2, it will add.
+if you dotn want to change the markup or add a span*/
+.section-title::after {
+    /* needed. because it has to be there */
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin-top: 10px;
+    background: #FFE600;
+}
+
+.section-title-center::after {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-title:first-child {
@@ -52,6 +73,17 @@ strong {
 .page-title {
     margin-bottom: 0;
     font-size: 3rem;
+    justify-self: center;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: #FFE600;
+    margin-top: -40px;
+    margin-left: 15px;
 }
 
 .subtitle {
@@ -67,6 +99,8 @@ strong {
     font-weight: 700;
     margin-top: .5em;
     text-decoration: none;
+    border: 0;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -75,6 +109,14 @@ strong {
     justify-self: start;
 }
 
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #ffc400;
+}
+
+.btn-form {
+    justify-self: end;
+}
 
 /* ==================
     general layout
@@ -178,6 +220,10 @@ wihthe 100% left. */
     padding: .5em;
     margin-left: auto;
     font-size: 1.5rem;
+}
+
+.current {
+    border-bottom: 1px solid #FFE600;
 }
 
 @media (min-width: 600px) {
@@ -349,6 +395,7 @@ on specific devices. */
 .subtitle {
     grid-column: 2 / -2;
     text-align: center;
+    color: #000;
 }
 
 .main-template>* {
@@ -357,14 +404,73 @@ on specific devices. */
 
 .main-image {
     margin-bottom: 1.5em;
+    /* first one is left and right */
+    box-shadow:
+        5px 5px 0px #000,
+        10px 10px 0 #FFE600;
+    /* box-shadow: 10px 10px 25px rgba(0, 0, 0, .2); */
 }
 
 @media (min-width: 600px) {
-    .main-image {
+
+    .main-image,
+    .secondary-text {
         grid-column: 2;
     }
 
     .main-text {
-        grid-column: 3 / -2;
+        grid-column: 3 / span 2;
+        grid: span 2;
+    }
+
+    .secondary-text {
+        order: 2;
+    }
+}
+
+
+/* ==================
+    form
+===================== */
+
+.contact-form {
+    display: grid;
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+textarea {
+    margin-bottom: .5em;
+}
+
+textarea {
+    /* para walng option na maresize */
+    resize: none;
+    height: 100px;
+}
+
+@media (min-width: 600px) {
+    .contact-form {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        grid-column-gap: 1em;
+    }
+
+    .fname-label,
+    .fname-input {
+        grid-column: 1;
+    }
+
+    .lname-label,
+    .lname-input {
+        grid-column: 2;
+    }
+
+    .message-label,
+    .message-textarea {
+        grid-column: span 2;
     }
 }
