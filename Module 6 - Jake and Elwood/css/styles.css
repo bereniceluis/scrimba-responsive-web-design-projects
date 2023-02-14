@@ -10,6 +10,10 @@ body {
     line-height: 1.6;
 }
 
+img {
+    max-width: 100%;
+}
+
 body * {
     outline: 1px solid magenta;
 }
@@ -40,6 +44,21 @@ strong {
     color: #000;
     margin-top: 1.25em;
 }
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+.page-title {
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+.subtitle {
+    margin: .5em 0 3em;
+    font-size: 1.125rem;
+}
+
 
 /* buttons */
 
@@ -315,5 +334,37 @@ on specific devices. */
 
     .col:first-child {
         grid-column: 2 / span 1;
+    }
+}
+
+/* ==================
+    template page
+===================== */
+
+.main-template {
+    padding: 4em 0;
+}
+
+.page-title,
+.subtitle {
+    grid-column: 2 / -2;
+    text-align: center;
+}
+
+.main-template>* {
+    grid-column: 2 / -2;
+}
+
+.main-image {
+    margin-bottom: 1.5em;
+}
+
+@media (min-width: 600px) {
+    .main-image {
+        grid-column: 2;
+    }
+
+    .main-text {
+        grid-column: 3 / -2;
     }
 }
